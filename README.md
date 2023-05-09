@@ -15,6 +15,8 @@ Visual Studio Code
 
 ...better experience with: Microsoft Edge, Google Chrome
 ```
+
+External API from: [TMDB](https://www.themoviedb.org)
 ___
 
 `Developed for demonstration purposes only`
