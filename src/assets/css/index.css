@@ -1,61 +1,195 @@
 /* ----- Global: Style CSS ----- */
 
+@font-face {
+  font-family: Pacifico;
+  src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
+}
+
 /* Body */
 body {
-    background: #2F3542;
-    background-image: linear-gradient(to right bottom, #3e152c, #411f38, #432843, #44324d, #453b57, #463d5c, #474062, #474267, #483e6a, #4b3a6b, #4e356d, #522f6d);
-    min-height: 100vh;
-  }
-  
-  
-  /* Custom Global: scrollbar */
-  
-  /* Width */
-  ::-webkit-scrollbar {
-    width: 10px !important;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgba(0, 51, 255, 0) !important;
-    border-radius: 5px !important;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #767f88 !important;
-    border-radius: 5px !important;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #57606f !important;
-    border-radius: 5px !important;
-  }
-  
-  
-  /* Custom Global: scrollbar (small) */
-  #scrollbar-small::-webkit-scrollbar {
-    width: 6px !important;
-  }
+  margin: 0;
+  padding: 0;
+  background-color: #303952;
+  background-image: linear-gradient(to right bottom, #353b48, #2a303a, #20252d, #171b20, #0d1013);
+  min-height: 100vh;
+}
 
 
-  
+/* Custom Global: scrollbar */
+
+/* Width */
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 51, 255, 0) !important;
+  border-radius: 5px !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #767f88 !important;
+  border-radius: 5px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #57606f !important;
+  border-radius: 5px !important;
+}
 
 
 
-/* footer */
 
-footer {
-    padding: 50px;
-  }
-  
-  .footer-url {
-    text-decoration: none;
-    color: #57606f;
-    transition: 0.5s ease-in-out;
-  }
-  
-  .footer-url:hover {
-    color: #a4b0be;
-  }
+/* Header*/
+
+.header {
+  color: white;
+}
+
+.header-big-title {
+  color: #dfe4ea;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 2px 2px 4px #000000;
+  animation: fadeInDown;
+  animation-duration: 1s;
+}
+
+.header-custom-hr {
+  margin: 20px auto;
+  border: 1px solid #747d8c;
+  width: 90%;
+  animation: zoomIn;
+  animation-duration: 1s;
+}
+
+/* Movie Card */
+
+.movie-card-section {
+  display: table;
+  margin: 0 auto;
+  animation: fadeInUp;
+  animation-duration: 1s;
+}
+
+.movie-card {
+  width: 250px;
+  height: 370px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 2px 2px black, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  background: black;
+  margin: 20px;
+  transition: transform .2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 2px 2px black, 0px 10px 50px -15px #40739e;
+}
+
+.movie-poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-card .movie-poster:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -180px;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(0deg, #000, 60%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.movie-card:hover .movie-poster:before {
+  bottom: 0;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.movie-card:hover .movie-poster img {
+  filter: blur(3px);
+}
+
+.movie-details {
+  position: relative;
+  left: 0;
+  bottom: -180px;
+  width: 100%;
+  right: 55%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+.movie-card:hover .movie-details {
+  bottom: 70%;
+}
+
+.movie-details {
+  font-family: "Verdana";
+  color: white;
+}
+
+.movie-title {
+  font-size: 20px;
+  color: #f1f2f6;
+}
+
+.movie-rating {
+  font-size: 15px;
+  color: #ced6e0;
+}
+
+.movie-release-date {
+  font-size: 10px;
+  color: #a4b0be;
+}
+
+.movie-search-on-google {
+  text-decoration: none;
+  color: #57606f;
+  transition: 0.5s;
+}
+
+.movie-search-on-google:hover {
+  color: #a4b0be;
+}
+
+
+
+
+
+
+/* Footer */
+.footer {
+  color: #57606f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+.footer-url {
+  text-decoration: none;
+  color: #57606f;
+  transition: 0.5s ease-in-out;
+}
+
+.footer-url:hover {
+  color: #a4b0be;
+}

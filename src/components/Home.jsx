@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Movies from './Movies';
 
 function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <Movies />
+    </div>
   )
 }
 
-export default Home
+export default Home;
