@@ -1,3 +1,26 @@
+<img alt="img" src="https://code.victorcarablut.com/wp-content/uploads/2021/10/2023-05-10.png" width="100%" />
+
+# Technologies
+
+```
+React Js (v18)
+ - Axios
+ 
+-- HTML, CSS
+```
+
+```
+// IDE
+Visual Studio Code
+
+...better experience with: Microsoft Edge, Google Chrome
+```
+___
+
+`Developed for demonstration purposes only`
+
+> [code.victorcarablut.com](https://code.victorcarablut.com)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
